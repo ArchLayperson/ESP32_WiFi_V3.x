@@ -25,5 +25,7 @@ jobs:
 
       - name: Platform.io
         run: |
+          apt-get update
+          apt-get install python-dev
           pip install -U platformio
           pio run
