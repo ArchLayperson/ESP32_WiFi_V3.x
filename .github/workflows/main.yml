@@ -25,7 +25,6 @@ jobs:
 
       - name: Platform.io
         run: |
-          apt-get update
-          apt-get install python-dev
+          python3 -m venv venv
+          source venv/bin/activate
           pip install -U platformio
-          pio run
