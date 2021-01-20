@@ -30,3 +30,9 @@ jobs:
           pip install wheel
           pip install -U platformio
           pio run
+          
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2.2.2
+        with:
+          name: openevse_wifi_v1_fimware
+          path: ".pio/build/openevse_wifi_v1/firmware.bin"
